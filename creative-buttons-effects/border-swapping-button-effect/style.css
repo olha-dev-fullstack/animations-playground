@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+}
+
+button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 3px;
+  height: 60px;
+  width: 200px;
+  line-height: 60px;
+  text-align: center;
+  color: #fdc518;
+  position: relative;
+  background: none;
+  border: none;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  height: 90px;
+  width: 200px;
+  transition: all 0.4s;
+  border-left: 2px solid red;
+  border-right: 2px solid #fdc518;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  height: 60px;
+  width: 230px;
+  transition: all 0.4s;
+  border-top: 2px solid red;
+  border-bottom: 2px solid #fdc518;
+  transition-delay: 0.4s;
+}
+
+button:hover::before {
+  transform: rotateY(180deg);
+}
+
+button:hover::after {
+  transform: rotateX(180deg);
+}
