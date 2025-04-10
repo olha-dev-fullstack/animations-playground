@@ -1,0 +1,55 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #272727;
+}
+
+button {
+  border: none;
+  padding: 12px 40px;
+  background-color: #c47135;
+  color: #fff;
+  font-size: 22px;
+  font-family: 'BenchNine', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s;
+  position: relative;
+  border: none;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 24px;
+  height: 24px;
+  transition: all 0.5s;
+  border-top: 2px solid #c47135;
+  border-left: 2px solid #c47135;
+}
+
+button:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 24px;
+  height: 24px;
+  transition: all 0.5s;
+  border-bottom: 2px solid #c47135;
+  border-right: 2px solid #c47135;
+}
+
+button:hover::after {
+  width: 100%;
+  height: 100%;
+}
