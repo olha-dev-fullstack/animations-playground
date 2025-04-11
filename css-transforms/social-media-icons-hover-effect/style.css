@@ -1,15 +1,15 @@
-body{
+body {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #dfe6e9;
 }
-.container{
+.container {
   text-align: center;
   display: flex;
 }
-.icon{
+.icon {
   width: 90px;
   height: 90px;
   background: #f1f1f1;
@@ -20,16 +20,16 @@ body{
   position: relative;
   overflow: hidden;
 }
-.icon i{
+.icon i {
   line-height: 90px;
   font-size: 25px;
   transition: 0.2s;
 }
-.icon:hover i{
+.icon:hover i {
   transform: scale(1.3);
   color: #f1f1f1;
 }
-.icon::before{
+.icon::before {
   content: "";
   position: absolute;
   width: 120%;
@@ -39,17 +39,19 @@ body{
   top: 90%;
   transform: rotate(45deg);
 }
-.icon:hover::before{
+.icon:hover::before {
   animation: animation 0.7s 1 forwards;
 }
 @keyframes animation {
-  0%{
+  0% {
     left: -110%;
     top: 90%;
-  }50%{
+  }
+  50% {
     left: 15%;
     top: -30%;
-  }100%{
+  }
+  100% {
     top: -10%;
     left: -10%;
   }
